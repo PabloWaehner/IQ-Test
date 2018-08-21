@@ -146,7 +146,8 @@ app.post("/registration", (req, res) => {
 
 app.get("/welcome", (req, res, next) => {
     console.log("req.session: ", req.session);
-    if (req.session.userID) {
+    if (!req.session.userID) {
+        // if (req.session.userID) {
         res.redirect("/");
     } else {
         res.sendFile(__dirname + "/index.html");
