@@ -13,12 +13,7 @@ function Welcome() {
                 <div className="firstpage">
                     <div className="blueline" />
                     <h1 className="testyouriq">Take a Free IQ Test!</h1>
-                    <Route
-                        exact
-                        path="/registration"
-                        component={Registration}
-                    />
-                    {/*<Route exact path="/" component={Registration} />*/}
+                    <Route exact path="/" component={Registration} />
                     <Route exact path="/login" component={Login} />
                     <Footer />
                 </div>
