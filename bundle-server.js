@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const ca = require("chalk-animation");
 
 app.use(require("./build.js"));
 
