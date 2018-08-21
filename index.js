@@ -144,21 +144,6 @@ app.post("/registration", (req, res) => {
     }
 });
 
-app.get("/welcome", (req, res, next) => {
-    console.log("req.session: ", req.session);
-    if (!req.session.userID) {
-        // if (req.session.userID) {
-        res.redirect("/");
-    } else {
-        res.sendFile(__dirname + "/index.html");
-    }
-});
-
-app.get("/logout", (req, res) => {
-    req.session = null;
-    res.redirect("/");
-});
-
 app.get("/user", (req, res) => {
     console.log("user1");
     if (!req.session.userID) {
@@ -176,6 +161,21 @@ app.get("/user", (req, res) => {
             console.log("logging error", err);
             res.sendStatus(500);
         });
+});
+
+app.get("/welcome", (req, res, next) => {
+    console.log("req.session: ", req.session);
+    if (req.session.userID) {
+        // if (req.session.userID) {
+        res.redirect("/");
+    } else {
+        res.sendFile(__dirname + "/index.html");
+    }
+});
+
+app.get("/logout", (req, res) => {
+    req.session = null;
+    res.redirect("/");
 });
 
 app.get("/questions", function(req, res) {
