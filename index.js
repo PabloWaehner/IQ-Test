@@ -146,8 +146,8 @@ app.post("/registration", (req, res) => {
 
 app.get("/welcome", (req, res, next) => {
     console.log("req.session: ", req.session);
-    if (req.session.userID) {
-        res.redirect("/");
+    if (!req.session.userID) {
+        res.redirect("/registration");
     } else {
         res.sendFile(__dirname + "/index.html");
     }
@@ -162,7 +162,8 @@ app.get("/logout", (req, res) => {
 app.get("/", (req, res) => {
     console.log("user1");
     if (!req.session.userID) {
-        res.redirect("/welcome");
+        res.redirect("/registration");
+        // res.redirect("/");
     }
     db.getUserById(req.session.userID)
         .then(data => {
