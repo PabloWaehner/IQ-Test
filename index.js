@@ -158,10 +158,11 @@ app.get("/logout", (req, res) => {
     res.redirect("/");
 });
 
-app.get("/user", (req, res) => {
+// app.get("/user", (req, res) => {
+app.get("/", (req, res) => {
     console.log("user1");
     if (!req.session.userID) {
-        res.redirect("/");
+        res.redirect("/welcome");
     }
     db.getUserById(req.session.userID)
         .then(data => {
