@@ -47,10 +47,6 @@ if (process.env.NODE_ENV != "production") {
 
 // }); //for heroku, but how?
 
-app.get("/*", function(req, res) {
-    res.sendFile(__dirname + "/index.html");
-});
-
 app.post("/login", (req, res) => {
     if (req.session.userID) {
         res.redirect("/");
@@ -152,7 +148,7 @@ app.get("/welcome", (req, res, next) => {
     console.log("req.session: ", req.session);
     if (req.session.userID) {
         // if (!req.session.userID) { if I try this it doesn't work
-        res.redirect("/"); //I have two, registration and homepage... here it would make sense to be the homepage, but at welcome#/ it shows the registration page...
+        res.redirect("/"); //I have two, registration and homepage... here it would make sense to be the homepage(because req.session.userID = true), but at welcome#/ it shows the registration page...
     } else {
         res.sendFile(__dirname + "/index.html");
     }
