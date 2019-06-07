@@ -47,10 +47,13 @@
     "spiced-pg": "^1.0.0",
     "styled-components": "^3.4.2",
     "uid-safe": "^2.1.4",
-    "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.8.4"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2"
+  }
 }
