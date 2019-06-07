@@ -12,7 +12,7 @@
     "node": "8.11.2"
   },
   "dependencies": {
-    "axios": ">=0.19.0",
+    "axios": "^0.19.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
@@ -55,5 +55,12 @@
   "devDependencies": {
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2"
+},
+  {
+  "name": "babel-loader",
+  "version": "6.4.1",
+  "peerDependencies": {
+    "webpack": "^2.2.0-rc"
   }
+}
 }
