@@ -44,7 +44,7 @@
     "redux": "^3.7.1",
     "redux-devtools-extension": "^2.13.2",
     "redux-promise": "^0.5.3",
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^3.1.0",
     "socket-cookie-session": "github:spicedacademy/socket-cookie-session",
     "socket.io": "^2.0.3",
     "spiced-pg": "^1.0.0",
