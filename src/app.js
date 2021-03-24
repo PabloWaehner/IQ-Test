@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Registration from "./Registration";
 import Login from "./Login";
 import Footer from "./Footer";
-import Intelligencetest from "./Intelligencetest";
+import IntelligenceTest from "./IntelligenceTest";
 import Header from "./Header";
 import testhistory from "./testhistory";
 import Assessments from "./Assessments";
@@ -47,7 +47,7 @@ export default class App extends React.Component {
                         <Route
                             exact
                             path="/intelligencetest"
-                            component={Intelligencetest}
+                            component={IntelligenceTest}
                         />
                         <Route
                             exact

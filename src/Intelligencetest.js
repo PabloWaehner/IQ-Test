@@ -19,7 +19,7 @@ const mapStateToProps = state => {
     };
 };
 
-class Intelligencetest extends React.Component {
+class IntelligenceTest extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -213,4 +213,4 @@ class Intelligencetest extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(Intelligencetest);
+export default connect(mapStateToProps)(IntelligenceTest);
